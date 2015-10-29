@@ -1,1 +1,13 @@
-Määrittelydokumentti
+£ Määrittelydokumentti
+
+Toteutan työssäni matriisilaskimen. Tavoitteena on toteuttaa laskimelle ainakin seuraavat ominaisuudet:
+ * skalaarilla kertominen
+ * kahden matriisin yhteenlasku
+ * kahden matriisin kertolasku
+ * determinantin laskeminen
+ 
+ Lisäksi, jos aikaa jää, toteutan seuraavat ominaisuudet:
+ * transpoosin muodostaminen
+ * neliömatriisin säännöllisyyden selvittäminen
+ 
+ Koska matriisit ovat luonteeltaan kaksiulotteisia taulukkoja, jotka täytyy jokaisen laskutoimituksen kohdalla käydä läpi, pienin aikavaativuus on aina n x m -matriisin kohdalla O(n,m). Tilavaativuus on joko O(1) tai O(n,m). Näihin pienimpiin mahdollisiin vaativuusluokkiin aion pyrkiä.
