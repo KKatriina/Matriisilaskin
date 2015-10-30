@@ -10,4 +10,9 @@ Toteutan työssäni matriisilaskimen. Tavoitteena on toteuttaa laskimelle ainaki
  * transpoosin muodostaminen
  * neliömatriisin säännöllisyyden selvittäminen
  
- Koska matriisit ovat luonteeltaan kaksiulotteisia taulukkoja, jotka täytyy jokaisen laskutoimituksen kohdalla käydä läpi, pienin aikavaativuus on aina n x m -matriisin kohdalla O(n,m). Tilavaativuus on joko O(1) tai O(n,m). Näihin pienimpiin mahdollisiin vaativuusluokkiin aion pyrkiä.
+ Ohjelma saa syötteenään lukurivejä, joista matriisi koostuu. Mahdollisesti ohjelma saa syötteenään numeroina
+ myös matriisin koon, numerona halutun laskutoimituksen ja vastauksia kyllä/ei-kysymyksiin (eli syötteenä y tai n).
+ 
+ Koska matriisit ovat luonteeltaan kaksiulotteisia taulukkoja, jotka täytyy jokaisen laskutoimituksen kohdalla 
+ käydä läpi, pienin aikavaativuus on aina n x m -matriisin kohdalla O(n x m). Tilavaativuus on laskutoimituksesta 
+ riippuen joko O(1) tai O(n x m). Näihin pienimpiin mahdollisiin vaativuusluokkiin aion pyrkiä.
