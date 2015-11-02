@@ -21,7 +21,7 @@ public class Main {
     }
     
     public static void tervetuloa(Scanner lukija, Laskin laskin) {
-        System.out.println("Tervetuloa käyttämään matriisilaskinta! \n Valitse haluamasi toiminto: \n skalaarilla kertominen: valitse 1 \n matriisien yhteenlasku: valitse 2 \n matriisien tulo: valitse 3");
+        System.out.println("Tervetuloa käyttämään matriisilaskinta! \n Valitse haluamasi toiminto: \n skalaarilla kertominen: valitse 1 \n matriisien yhteenlasku: valitse 2 \n matriisien tulo: valitse 3 \n lopetus: valitse x");
         
         String syote = lukija.nextLine();
         
@@ -31,6 +31,8 @@ public class Main {
             summa(lukija, laskin);
         } else if (syote.equals("3")) {
             tulo(lukija, laskin);
+        } else if (syote.equals("x")) {
+            System.out.println("Kiitos!");
         } else {
             System.out.println("Virheellinen syöte!");
             tervetuloa(lukija, laskin);
