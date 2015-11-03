@@ -20,6 +20,13 @@ public class Main {
        tervetuloa(lukija, laskin);
     }
     
+    /**
+ * Metodi ohjaa käyttäjän oikeaan toimintoon
+ *
+ * @param   lukija  käyttäjän syötteen lukija
+ * @param   laskin  toimintoja toteuttava laskin
+ * 
+ */
     public static void tervetuloa(Scanner lukija, Laskin laskin) {
         System.out.println("Tervetuloa käyttämään matriisilaskinta! \n Valitse haluamasi toiminto: \n skalaarilla kertominen: valitse 1 \n matriisien yhteenlasku: valitse 2 \n matriisien tulo: valitse 3 \n lopetus: valitse x");
         
@@ -39,6 +46,13 @@ public class Main {
         }
     }
     
+    /**
+ * Metodi hoitaa skalaaritulon alkioiden kyselyn käyttäjätlä ja tuloksen kertomisen käyttäjälle
+ *
+ * @param   lukija  käyttäjän syötteen lukija
+ * @param   laskin  toimintoja toteuttava laskin
+ * 
+ */    
     public static void skalaaritulo(Scanner lukija, Laskin laskin) {
         System.out.println("Anna kokonaisluku, jolla kerrotaan:");
         int skalaari = lukija.nextInt();
@@ -48,6 +62,13 @@ public class Main {
         tulosta(tulos);
     }
     
+        /**
+ * Metodi hoitaa summan alkioiden kyselyn käyttäjätlä ja tuloksen kertomisen käyttäjälle
+ *
+ * @param   lukija  käyttäjän syötteen lukija
+ * @param   laskin  toimintoja toteuttava laskin
+ * 
+ */ 
     public static void summa(Scanner lukija, Laskin laskin) {
         System.out.println("Ensimmäinen matriisi:");
         int[][] matriisi1 = tallennaMatriisi(lukija);
@@ -60,6 +81,14 @@ public class Main {
         tulosta(tulos);
     }
     
+        /**
+ * Metodi tallentaa käyttäjän syötteen kaksiulotteiseksi taulukoksi
+ *
+ * @param   lukija  käyttäjän syötteen lukija
+ * 
+ * @return  matriisi    kaksiulotteinen taulukko
+ * 
+ */ 
     public static int[][] tallennaMatriisi(Scanner lukija) {
         System.out.println("Matriisin rivien määrä:");
         int riveja = lukija.nextInt();
@@ -81,7 +110,13 @@ public class Main {
         
         return matriisi;
     }
-    
+
+        /**
+ * Metodi tulostaa kaksiulotteisen taulukon rivi kerrallaan
+ *
+ * @param   matriisi    kaksiulotteinen taulukko, joka tulostetaan
+ * 
+ */ 
     public static void tulosta(int[][] matriisi) {
         System.out.println("Tulos:");
         int i = 0;
@@ -96,6 +131,13 @@ public class Main {
         }
     }
 
+        /**
+ * Metodi hoitaa matriisitulon alkioiden kyselyn käyttäjätlä ja tuloksen kertomisen käyttäjälle
+ *
+ * @param   lukija  käyttäjän syötteen lukija
+ * @param   laskin  toimintoja toteuttava laskin
+ * 
+ */ 
     public static void tulo(Scanner lukija, Laskin laskin) {
         System.out.println("Ensimmäinen matriisi:");
         int[][] matriisi1 = tallennaMatriisi(lukija);

@@ -14,6 +14,15 @@ public class Laskin {
         
     }
 
+        /**
+ * Metodi laskee vakiokertoimen ja matriisin skalaaritulon
+ *
+ * @param   skalaari    kokonaisluku, jolla kerrotaan
+ * @param   matriisi    kaksiulotteinen taulukko, joka tulkitaan matriisiksi
+ * 
+ * @return  matriisi    tuloksena syntynyt matriisi
+ * 
+ */ 
     public int[][] skalaaritulo(int skalaari, int[][] matriisi) {
         int i = 0;
         while (i < matriisi.length) {
@@ -28,6 +37,15 @@ public class Laskin {
         return matriisi;
     }
 
+            /**
+ * Metodi laskee kahden matriisin summan
+ *
+ * @param   matriisi2    summan ensimmäinen matriisi
+ * @param   matriisi1    summan toinen matriisi
+ * 
+ * @return  matriisi1    tuloksena syntynyt matriisi
+ * 
+ */ 
     public int[][] summa(int[][] matriisi1, int[][] matriisi2) {
         int i = 0;
         while (i < matriisi1.length) {
@@ -42,6 +60,15 @@ public class Laskin {
         return matriisi1;
     }
 
+            /**
+ * Metodi laskee kahden matriisin tulon
+ *
+ * @param   matriisi1    tulon ensimmäinen matriisi
+ * @param   matriisi2    tulon toinen matriisi
+ * 
+ * @return  matriisi1    tuloksena syntynyt matriisi
+ * 
+ */ 
     public int[][] tulo(int[][] matriisi1, int[][] matriisi2) {
         int riveja = matriisi1.length;
         int sarakkeita = matriisi2[0].length;
