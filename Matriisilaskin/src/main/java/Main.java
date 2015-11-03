@@ -17,7 +17,11 @@ public class Main {
        Scanner lukija = new Scanner(System.in); 
        Laskin laskin = new Laskin();
        
-       tervetuloa(lukija, laskin);
+//       tervetuloa(lukija, laskin);
+       int[][] matriisi = tallennaMatriisi(lukija);
+       tulosta(matriisi);
+       int tulostettava = laskin.determinantti(matriisi);
+        System.out.println(tulostettava);
     }
     
     /**
