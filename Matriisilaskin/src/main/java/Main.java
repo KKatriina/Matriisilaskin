@@ -17,11 +17,11 @@ public class Main {
        Scanner lukija = new Scanner(System.in); 
        Laskin laskin = new Laskin();
        
-//       tervetuloa(lukija, laskin);
-       int[][] matriisi = tallennaMatriisi(lukija);
-       tulosta(matriisi);
-       int tulostettava = laskin.determinantti(matriisi);
-        System.out.println(tulostettava);
+       tervetuloa(lukija, laskin);
+//       int[][] matriisi = tallennaMatriisi(lukija);
+//       tulosta(matriisi);
+//       int[][] tulostettava = laskin.transpoosi(matriisi);
+//       tulosta(tulostettava);
     }
     
     /**
@@ -32,7 +32,7 @@ public class Main {
  * 
  */
     public static void tervetuloa(Scanner lukija, Laskin laskin) {
-        System.out.println("Tervetuloa käyttämään matriisilaskinta! \n Valitse haluamasi toiminto: \n skalaarilla kertominen: valitse 1 \n matriisien yhteenlasku: valitse 2 \n matriisien tulo: valitse 3 \n lopetus: valitse x");
+        System.out.println("Tervetuloa käyttämään matriisilaskinta! \n Valitse haluamasi toiminto: \n skalaarilla kertominen: valitse 1 \n matriisien yhteenlasku: valitse 2 \n matriisien tulo: valitse 3 \n determinantin laskeminen: valitse 4 \n transpoosin muodostaminen: valitse 5 \n lopetus: valitse x");
         
         String syote = lukija.nextLine();
         
@@ -44,6 +44,10 @@ public class Main {
             tulo(lukija, laskin);
         } else if (syote.equals("x")) {
             System.out.println("Kiitos!");
+        } else if (syote.equals("4")) {
+            determinantti(lukija, laskin);
+        } else if (syote.equals("5")) {
+            transpoosi(lukija, laskin);
         } else {
             System.out.println("Virheellinen syöte!");
             tervetuloa(lukija, laskin);
@@ -51,7 +55,7 @@ public class Main {
     }
     
     /**
- * Metodi hoitaa skalaaritulon alkioiden kyselyn käyttäjätlä ja tuloksen kertomisen käyttäjälle
+ * Metodi hoitaa skalaaritulon alkioiden kyselyn käyttäjältä ja tuloksen kertomisen käyttäjälle
  *
  * @param   lukija  käyttäjän syötteen lukija
  * @param   laskin  toimintoja toteuttava laskin
@@ -67,7 +71,7 @@ public class Main {
     }
     
         /**
- * Metodi hoitaa summan alkioiden kyselyn käyttäjätlä ja tuloksen kertomisen käyttäjälle
+ * Metodi hoitaa summan alkioiden kyselyn käyttäjältä ja tuloksen kertomisen käyttäjälle
  *
  * @param   lukija  käyttäjän syötteen lukija
  * @param   laskin  toimintoja toteuttava laskin
@@ -136,7 +140,7 @@ public class Main {
     }
 
         /**
- * Metodi hoitaa matriisitulon alkioiden kyselyn käyttäjätlä ja tuloksen kertomisen käyttäjälle
+ * Metodi hoitaa matriisitulon alkioiden kyselyn käyttäjältä ja tuloksen kertomisen käyttäjälle
  *
  * @param   lukija  käyttäjän syötteen lukija
  * @param   laskin  toimintoja toteuttava laskin
@@ -151,6 +155,30 @@ public class Main {
         //tarvitaanko tähän jotakin virheellisten tsekkausta?
         
         int[][] tulos = laskin.tulo(matriisi1, matriisi2);
+        tulosta(tulos);
+    }
+
+            /**
+ * Metodi hoitaa matriisin kysymisen käyttäjältä ja determinantin kertomisen käyttäjälle
+ *
+ * @param   lukija  käyttäjän syötteen lukija
+ * @param   laskin  toimintoja toteuttava laskin
+ * 
+ */ 
+    public static void determinantti(Scanner lukija, Laskin laskin) {
+        int tulos = laskin.determinantti(tallennaMatriisi(lukija));
+        System.out.println("Matriisin determinantti on " + tulos);
+    }
+
+                /**
+ * Metodi hoitaa matriisin kysymisen käyttäjältä ja transpoosin kertomisen käyttäjälle
+ *
+ * @param   lukija  käyttäjän syötteen lukija
+ * @param   laskin  toimintoja toteuttava laskin
+ * 
+ */ 
+    public static void transpoosi(Scanner lukija, Laskin laskin) {
+        int[][] tulos = laskin.transpoosi(tallennaMatriisi(lukija));
         tulosta(tulos);
     }
     

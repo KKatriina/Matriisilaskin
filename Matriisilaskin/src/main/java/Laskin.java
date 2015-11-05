@@ -153,5 +153,29 @@ public class Laskin {
         return alamatriisi;
     }
     
+                /**
+ * Metodi luo matriisin transpoosin.
+ *
+ * @param   matriisi    kaksiulotteinen taulukko, joka tulkitaan matriisiksi
+ * 
+ * @return  tulos    matriisin transpoosi
+ * 
+ */ 
+    public int[][] transpoosi(int[][] matriisi) {
+        int[][] tulos = new int[matriisi[0].length][matriisi.length];
+        
+        int i = 0;
+        while (i < matriisi[0].length) {
+            int k = 0;
+            while (k < matriisi.length) {
+                tulos[i][k] = matriisi[k][i];
+                k++;
+            }
+            i++;
+        }
+        
+        return tulos;
+    }
+    
     
 }

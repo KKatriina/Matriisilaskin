@@ -6,6 +6,7 @@
 
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -20,6 +21,7 @@ public class LaskinTest {
     int[][] matriisi1;
     int[][] matriisi2;
     int[][] matriisi3;
+    int[][] matriisi4;
     int[][] ykkosmatriisi;
     int[][] nollamatriisi;
     
@@ -61,6 +63,16 @@ public class LaskinTest {
         matriisi3[1][1] = 5;
         matriisi3[1][2] = 6;
         
+        matriisi4 = new int[3][3];        
+        matriisi4[0][0] = 1;
+        matriisi4[1][0] = 6;
+        matriisi4[2][0] = 3;
+        matriisi4[0][1] = 5;
+        matriisi4[1][1] = 0;
+        matriisi4[2][1] = 2;
+        matriisi4[0][2] = 7;
+        matriisi4[1][2] = 1;
+        matriisi4[2][2] = 0;
     }
     
     @Test
@@ -183,7 +195,51 @@ public class LaskinTest {
         assertEquals(tulos[2][2], 51);
     }
     
+    @Test
+    public void alamatriisinMuodostaminenToimii() {
+        int[][] alamatriisi0 = laskin.alamatriisi(matriisi4, 0);
+        int[][] alamatriisi1 = laskin.alamatriisi(matriisi4, 1);
+        int[][] alamatriisi2 = laskin.alamatriisi(matriisi4, 2);
+        
+        assertEquals(alamatriisi0.length, 2);
+        assertEquals(alamatriisi0[0].length, 2);
+        assertEquals(alamatriisi0[0][0], 0);
+        assertEquals(alamatriisi0[1][1], 0);
+        assertEquals(alamatriisi1[0][0], 6);
+        assertEquals(alamatriisi1[1][1], 0);
+        assertEquals(alamatriisi2[0][0], 6);
+        assertEquals(alamatriisi2[1][1], 2);
+    }
     
+    @Test
+    public void determinanttiToimiiPienellaMatriisilla() {
+        int tulos = laskin.determinantti(matriisi1);
+        
+        assertEquals(tulos, -2);
+    }
+    
+    @Test
+    public void determinanttiToimiiIsommallaMatriisilla() {
+        int tulos = laskin.determinantti(matriisi4);
+        
+        assertEquals(tulos, 97);
+    }
+    
+    @Test
+    public void transpoosiToimiiNeliomatriisilla() {
+        int[][] transpoosi = laskin.transpoosi(matriisi1);
+        
+        assertEquals(transpoosi[0][0], 1);
+        assertEquals(transpoosi[0][1], 3);
+        assertEquals(transpoosi[1][0], 2);
+        assertEquals(transpoosi[1][1], 4);
+    }
+    
+    public void transpoosiToimiiEiNeliolla() {
+        int[][] transpoosi = laskin.transpoosi(matriisi2);
+        
+        Assert.assertArrayEquals(transpoosi, matriisi3);
+    }
     
     
     
