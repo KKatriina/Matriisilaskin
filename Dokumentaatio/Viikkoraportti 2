@@ -1,0 +1,7 @@
+#Viikkoraportti 2
+
+Tällä viikolla olen toteuttanut laskimeeni skalaaritulon, matriisitulon,
+matriisien summan, transpoosin ja determinantin muodostamisen. En ollut koodannut javalla hetkeen, joten 
+aluksi minun täytyi palauttaa mieleeni perusasioita, mutta sen jälkeen työ on edistynyt aika kepeästi. 
+Olen kirjoittanut testejä kaikilla laskimeni metodeille, mutta en main-luokan metodeille, jotka käsittelevät 
+käyttäjän syötteitä (pitäisikö?). Seuraavaksi lähden toteuttamaan Gaussin algoritmia.
