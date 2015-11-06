@@ -235,11 +235,68 @@ public class LaskinTest {
         assertEquals(transpoosi[1][1], 4);
     }
     
+    @Test
     public void transpoosiToimiiEiNeliolla() {
         int[][] transpoosi = laskin.transpoosi(matriisi2);
         
-        Assert.assertArrayEquals(transpoosi, matriisi3);
+        int[][] matriisiT = new int[2][3];
+        matriisiT[0][0] = 1;
+        matriisiT[1][0] = 2;
+        matriisiT[0][1] = 3;
+        matriisiT[1][1] = 4;
+        matriisiT[0][2] = 5;
+        matriisiT[1][2] = 6;
+        
+        Assert.assertArrayEquals(transpoosi, matriisiT);
     }
+    
+    @Test
+    public void GaussinAlgoritmiToimiiPienellaMatriisilla() {
+        double[] d1 = {1.0, 2.0};
+        double[] d2 = {3.0, 4.0};
+        double[][] dmatriisi = {d1, d2};
+        
+        double[][] porrasmatriisi = laskin.gaussin_algoritmi(dmatriisi);
+        
+        assertEquals(1.333333, porrasmatriisi[0][1], 0.1);
+        assertEquals(1, porrasmatriisi[0][0], 0.1);
+        assertEquals(0, porrasmatriisi[1][0], 0.1);
+        assertEquals(1, porrasmatriisi[1][1], 0.1);
+        
+    }
+    
+//    @Test
+//    public void GaussinalgoritmiToimiiEiNeliolla() {
+//        double[] d1 = {1.0, 4.0, 9.0, 8.0};
+//        double[] d2 = {8.0, 4.0, 5.0, 3.0};
+//        double[][] dmatriisi = {d1, d2};
+//        
+//        double[][] porrasmatriisi = laskin.gaussin_algoritmi(dmatriisi);
+//        
+//        double[] d3 = {1.0, 0.5, 9.0, 8.0};
+//        double[] d4 = {0.0, 1.0, -4.0, -5.0};
+//        
+//        assertEquals(d3, porrasmatriisi[0]);
+//        assertEquals(d4, porrasmatriisi[1]);
+//    }
+//    
+//    @Test
+//    public void GaussinAlgoritmiToimiiIsommallaNeliomatriisilla() {
+//        double[] d1 = {2.0, 3.0, 5.0};
+//        double[] d2 = {4.0, 6.0, 8.0};
+//        double[] d3 = {1.0, 7.0, 3.0};
+//        double[][] dmatriisi = {d1, d2, d3};
+//        
+//        double[][] porrasmatriisi = laskin.gaussin_algoritmi(dmatriisi);
+//        
+//        double[] d4 = {1.0, 0.66666, 2.0};
+//        double[] d5 = {0.0, 1.0, 0.181818};
+//        double[] d6 = {0.0, 0.0, 0.0};
+//        
+//        assertEquals(d4, porrasmatriisi[0]);
+//        assertEquals(d5, porrasmatriisi[1]);
+//        assertEquals(d6, porrasmatriisi[2]);
+//    }
     
     
     

@@ -178,4 +178,63 @@ public class Laskin {
     }
     
     
+
+                 /**
+ * Metodi muuttaa matriisin porrasmatriisiksi.
+ *
+ * @param   matriisi    kaksiulotteinen taulukko, joka tulkitaan matriisiksi
+ * 
+ * @return  matriisi    muodostettu porrasmatriisi
+ * 
+ */    
+    public double[][] gaussin_algoritmi(double[][] matriisi) {
+        int length = Math.min(matriisi.length, matriisi[0].length);
+        int m = matriisi.length;
+        int n = matriisi[0].length;
+        
+        for (int k = 0; k < length; k++) {
+            double max_val = matriisi[k][k];
+            int max_ind = k;
+            for (int i = k; i < m; i++) {
+                double val = matriisi[i][k];
+                if (Math.abs(val) > Math.abs(max_val)) {
+                    max_val = val;
+                    max_ind = i;
+                }
+            }
+            
+            if (max_val != 0) {
+                double[] temp = new double[matriisi.length];
+                for (int l = 0; l < matriisi.length; l++) {
+                    temp[l] = matriisi[k][l];
+                }
+                for (int l = 0; l < matriisi.length; l++) {
+                    matriisi[k][l] = matriisi[max_ind][l];
+                }
+                for (int l = 0; l < matriisi.length; l++) {
+                    matriisi[max_ind][l] = temp[l];
+                }
+                
+                
+                double temp2 = matriisi[k][k];
+                for (int l = 0; l < matriisi.length; l++) {
+                    matriisi[k][l] = matriisi[k][l]/temp2;
+                }
+
+
+                for (int i = k + 1; i < m; i++) {
+                    for (int j = k + 1; j < n; j++) {
+                        matriisi[i][j] = matriisi[i][j] - matriisi[k][j] * (matriisi[i][k]/matriisi[k][k]);
+                    }
+                    matriisi[i][k] = 0;
+                }
+   
+                
+            }
+        }
+        
+        return matriisi;
+    }
+    
+    
 }
