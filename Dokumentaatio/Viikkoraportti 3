@@ -1,0 +1,10 @@
+# Viikkoraportti 3
+
+Tällä viikolla en ole juuri tehnyt muuta kuin toteutin Gaussin algoritmin testeineen ja javadoceineen.
+Lunttasin wikipediasta pseudokoodimallia (englanninkielisestä - suomenkielisessä wikipediassa oli joko algoritmissä vikaa tai
+sitten en vain tajunnut). Nyt olen kirjoittanut ohjelmaa suunnilleen siinä laajuudessa, mitä alussa suunnittelin,
+mikä herättää kysymyksiä:
+
+1. Riittääkö tämä laajuus vai kannattaisiko vielä vääntää jokin ominaisuus?
+2. Täytyykö ohjelman kyetä käsittelemään virhesyötteitä?
+3. Minkälaista suorituskykytestausta tai vastaavaa tässä työssä kannattaisi tehdä?
