@@ -17,12 +17,12 @@ public class Main {
        Scanner lukija = new Scanner(System.in); 
        Laskin laskin = new Laskin();
        
-//       tervetuloa(lukija, laskin);
+       tervetuloa(lukija, laskin);
        
-       double[][] matriisi = tallennaMatriisiDouble(lukija);
-       tulostaDouble(matriisi);
-       double[][] tulostettava = laskin.gaussin_algoritmi(matriisi);
-       tulostaDouble(tulostettava);
+//       double[][] matriisi = tallennaMatriisiDouble(lukija);
+//       tulostaDouble(matriisi);
+//       double[][] tulostettava = laskin.gaussin_algoritmi(matriisi);
+//       tulostaDouble(tulostettava);
     }
     
     /**
@@ -37,22 +37,24 @@ public class Main {
         
         String syote = lukija.nextLine();
         
-        if (syote.equals("1")) {
-            skalaaritulo(lukija, laskin);
-        } else if (syote.equals("2")) {
-            summa(lukija, laskin);
-        } else if (syote.equals("3")) {
-            tulo(lukija, laskin);
-        } else if (syote.equals("x")) {
+        
+        
+        if (syote.equals("x")) {
             System.out.println("Kiitos!");
-        } else if (syote.equals("4")) {
-            determinantti(lukija, laskin);
-        } else if (syote.equals("5")) {
-            transpoosi(lukija, laskin);
-        } else if (syote.equals("6")) {
-            gaussin_algoritmi(lukija, laskin);
         } else {
-            System.out.println("Virheellinen syöte!");
+            if (syote.equals("2")) {
+                summa(lukija, laskin);
+            } else if (syote.equals("3")) {
+                tulo(lukija, laskin);
+            } else if (syote.equals("1")) {
+                skalaaritulo(lukija, laskin);
+            } else if (syote.equals("4")) {
+                determinantti(lukija, laskin);
+            } else if (syote.equals("5")) {
+                transpoosi(lukija, laskin);
+            } else if (syote.equals("6")) {
+                gaussin_algoritmi(lukija, laskin);
+            }
             tervetuloa(lukija, laskin);
         }
     }

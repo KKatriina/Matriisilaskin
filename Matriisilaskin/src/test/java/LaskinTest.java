@@ -265,38 +265,42 @@ public class LaskinTest {
         
     }
     
-//    @Test
-//    public void GaussinalgoritmiToimiiEiNeliolla() {
-//        double[] d1 = {1.0, 4.0, 9.0, 8.0};
-//        double[] d2 = {8.0, 4.0, 5.0, 3.0};
-//        double[][] dmatriisi = {d1, d2};
-//        
-//        double[][] porrasmatriisi = laskin.gaussin_algoritmi(dmatriisi);
-//        
-//        double[] d3 = {1.0, 0.5, 9.0, 8.0};
-//        double[] d4 = {0.0, 1.0, -4.0, -5.0};
-//        
-//        assertEquals(d3, porrasmatriisi[0]);
-//        assertEquals(d4, porrasmatriisi[1]);
-//    }
-//    
-//    @Test
-//    public void GaussinAlgoritmiToimiiIsommallaNeliomatriisilla() {
-//        double[] d1 = {2.0, 3.0, 5.0};
-//        double[] d2 = {4.0, 6.0, 8.0};
-//        double[] d3 = {1.0, 7.0, 3.0};
-//        double[][] dmatriisi = {d1, d2, d3};
-//        
-//        double[][] porrasmatriisi = laskin.gaussin_algoritmi(dmatriisi);
-//        
-//        double[] d4 = {1.0, 0.66666, 2.0};
-//        double[] d5 = {0.0, 1.0, 0.181818};
-//        double[] d6 = {0.0, 0.0, 0.0};
-//        
-//        assertEquals(d4, porrasmatriisi[0]);
-//        assertEquals(d5, porrasmatriisi[1]);
-//        assertEquals(d6, porrasmatriisi[2]);
-//    }
+    @Test
+    public void GaussinalgoritmiToimiiEiNeliolla() {
+        double[] d1 = {1.0, 4.0, 9.0, 8.0};
+        double[] d2 = {8.0, 4.0, 5.0, 3.0};
+        double[][] dmatriisi = {d1, d2};
+        
+        double[][] porrasmatriisi = laskin.gaussin_algoritmi(dmatriisi);
+        
+        double[] d3 = {1.0, 0.5, 9.0, 8.0};
+        double[] d4 = {0.0, 1.0, -4.0, -5.0};
+        
+        for (int i = 0; i < 4; i++) {
+            assertEquals(d3[i], porrasmatriisi[0][i], 0.1);
+            assertEquals(d4[i], porrasmatriisi[1][i], 0.1);
+        }
+    }
+    
+    @Test
+    public void GaussinAlgoritmiToimiiIsommallaNeliomatriisilla() {
+        double[] d1 = {2.0, 3.0, 5.0};
+        double[] d2 = {4.0, 6.0, 8.0};
+        double[] d3 = {1.0, 7.0, 3.0};
+        double[][] dmatriisi = {d1, d2, d3};
+        
+        double[][] porrasmatriisi = laskin.gaussin_algoritmi(dmatriisi);
+        
+        double[] d4 = {1.0, 1.5, 2.0};
+        double[] d5 = {0.0, 1.0, 0.181818};
+        double[] d6 = {0.0, 0.0, 1.0};
+        
+        for (int i = 0; i < 3; i++) {
+            assertEquals(d4[i], porrasmatriisi[0][i], 0.1);
+            assertEquals(d5[i], porrasmatriisi[1][i], 0.1);
+            assertEquals(d6[i], porrasmatriisi[2][i], 0.1);
+        }
+    }
     
     
     

@@ -79,14 +79,12 @@ public class Laskin {
             while (j < tulos[0].length) {
                 int pistetulo = 0;
                 int i2 = 0;
-                while (i2 < matriisi2.length) {
-                    System.out.println("M1:" + i + i2 + ", M2:" + i2 + j);    
+                while (i2 < matriisi2.length) {   
                     pistetulo = pistetulo + matriisi1[i][i2] * matriisi2[i2][j];                    
 
                     i2++;
                 }
                 tulos[i][j] = pistetulo;
-                System.out.println("[i][j]:" + i + j);
                 j++;
             }
             i++;
