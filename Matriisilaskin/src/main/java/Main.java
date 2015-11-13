@@ -36,9 +36,7 @@ public class Main {
         System.out.println("Tervetuloa käyttämään matriisilaskinta! \n Valitse haluamasi toiminto: \n skalaarilla kertominen: valitse 1 \n matriisien yhteenlasku: valitse 2 \n matriisien tulo: valitse 3 \n determinantin laskeminen: valitse 4 \n transpoosin muodostaminen: valitse 5 \n porrasmatriisin muodostaminen: valitse 6 \n lopetus: valitse x");
         
         String syote = lukija.nextLine();
-        
-        
-        
+          
         if (syote.equals("x")) {
             System.out.println("Kiitos!");
         } else {
