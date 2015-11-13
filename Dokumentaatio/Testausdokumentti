@@ -1,0 +1,39 @@
+# Testausdokumentti
+
+Testeissäni painottuu yksikkötestaus. Testasin jokaista matriisin laskutoimitusta usealla 
+eri esimerkillä, ja valitsin esimerkit aina kunkin laskutoimituksen mukaan, niin että laskutoimituksen 
+erityistapaukset tulivat testattua. 
+
+Skalaarituloa testasin positiivisella skalaarilla sekä nollalla. Matriisien summaa testasin niin, että 
+summasin neliömatriisin itsensä kanssa, summasin neliömatriisin nollamatriisin kanssa sekä neliömatriisin 
+ykkösmatriisin kanssa, ja summasin vielä (2 x 3)-matriisin itsensä kanssa. Matriisituloa testasin kertomalla 
+ykkösmatriisit keskenään, kertomalla neliömatriisin ykkösmatriisilla ja kertomalla ykkösmatriisin nollamatriisilla, 
+ja niin kuin summan kohdalla testasin vielä (2 x 3)-matriisien tuloa.
+
+Determinanttia varten tein ja testasin erillisen metodin alamatriisin muodostamiselle. Varsinaista determinantin laskemisen
+metodia testasin sekä (2 x 2)- että (3 x 3)-neliömatriisilla. Transpoosia testasin sekä neliömatriisilla että 
+(2 x 3)-matriisilla. Gaussin algoritmia testasin sekä (2 x 2)-, (3 x 3)- että (2 x 3)-matriiseilla.
+
+Testasin suorituskykyä matriisitulolle (sekä neliömatriisilla että ei-neliömatriisilla),
+Gaussin algoritmille sekä determinantin laskemiselle. Sain seuraavia tuloksia:
+
+Matriisitulo neliömatriisille O(n³)
+- n = 100: 0 ms
+- n = 1000: 1 757 ms
+- n = 5000:
+
+Matriisitulo ei-neliömatriisille O(nmp)
+- n = 1000, m = 10, p = 100: 2 ms
+- n = 10000, m = 100, p = 1000: 2634 ms
+- n = 50000, m = 500, p = 5000: 
+
+Gaussin algoritmi O(n³)
+- n = 100: 1 ms
+- n = 1000: 19 ms
+- n = 5000: 
+
+Determinantti O(n!)
+- n = 10: 267 ms
+- n = 11: 2 757 ms
+- n = 12: 32 496 ms
+- n = 13: 438 127 ms
