@@ -5,3 +5,19 @@ käyttöliittymänä ja laskin-luokka hoitaa laskutoimitusten tekemisen. Ohjelma
 kaksiulotteisina taulukkoina. Testausluokkia on kaksi: sekä tavanomaiset unit-testit laskin-luokalle
 luokassa LaskinTest että suorituskykytestit luokassa LaskinTestSuorituskyky.
 
+Aika- ja tilavaativuudet:
+- skalaaritulo: aikavaativuus (n x m)-matriisille O(nm), koska kaksiulotteinen taulukko täytyy käydä läpi,
+tilavaativuus O(1), sillä muutokset tehdään suoraan samaan taulukkoon
+- summa: aikavaativuus (n x m)-matriisille tässäkin O(nm) ja tilavaativuus O(1) 
+- tulo: aikavaativuus (n X m)- ja (m x p)-matriisille O(nmp), sillä jokaista ensimmäisen matriisin
+alkiota kohti käydään kertaalleen läpi toisen matriisin sarake, tilavaativuus O(nm), koska luodaan
+uusi kaksiulotteinen taulukko
+- transpoosi: aikavaativuus (n x m)-matriisille O(nm), koska matriisi on käytävä kertaalleen läpi,
+tilavaativuus O(nm), koska luodaan uusi matriisi
+- determinantti: aikavaativuus (n x n)-matriisille O(n!). Aikavaativuus (2 x 2)-matriisille vakio, (k x k)-alamatriisin 
+luomisen aika- ja tilavaativuus O(k²). Alamatriisi-metodia taas kutsutaan rekursiivisesti KESKEN
+
+Käyttöliittymä on melko alkeellinen. Olisi myös kiva, jos matriisin voisi 
+tallentaa ohjelman suoritusajaksi muistiin ja sille voisi tehdä monia toimituksia peräkkäin.
+
+Lähteinä olen käyttäneet wikipediaa sekä vanhoja tira-materiaaleja.
