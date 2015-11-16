@@ -1,0 +1,7 @@
+# Testausdokumentaatio
+
+Ohjelma koostuu kahdesta luokasta, joista main-luokka toimii 
+käyttöliittymänä ja laskin-luokka hoitaa laskutoimitusten tekemisen. Ohjelmassa käsitellään matriiseja
+kaksiulotteisina taulukkoina. Testausluokkia on kaksi: sekä tavanomaiset unit-testit laskin-luokalle
+luokassa LaskinTest että suorituskykytestit luokassa LaskinTestSuorituskyky.
+
