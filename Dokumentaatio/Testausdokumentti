@@ -2,7 +2,8 @@
 
 Testeissäni painottuu yksikkötestaus. Testasin jokaista matriisin laskutoimitusta usealla 
 eri esimerkillä, ja valitsin esimerkit aina kunkin laskutoimituksen mukaan, niin että laskutoimituksen 
-erityistapaukset tulivat testattua. 
+erityistapaukset tulivat testattua. Toteutin testejä vain Laskin-luokalle, sillä Main-luokka toimii 
+lähinnä käyttöliittymänä.
 
 Skalaarituloa testasin positiivisella skalaarilla sekä nollalla. Matriisien summaa testasin niin, että 
 summasin neliömatriisin itsensä kanssa, summasin neliömatriisin nollamatriisin kanssa sekä neliömatriisin 
@@ -20,20 +21,26 @@ Gaussin algoritmille sekä determinantin laskemiselle. Sain seuraavia tuloksia:
 Matriisitulo neliömatriisille O(n³)
 - n = 100: 0 ms
 - n = 1000: 1 757 ms
+- n = 2000: 25 683 ms
 - n = 5000:
 
 Matriisitulo ei-neliömatriisille O(nmp)
 - n = 1000, m = 10, p = 100: 2 ms
-- n = 10000, m = 100, p = 1000: 2634 ms
+- n = 10000, m = 100, p = 1000: 2 634 ms
+- n = 20000, m = 200, p = 2000: 8 290 ms
 - n = 50000, m = 500, p = 5000: 
 
 Gaussin algoritmi O(n³)
 - n = 100: 1 ms
 - n = 1000: 19 ms
-- n = 5000: 
+- n = 5000: 33 ms
 
 Determinantti O(n!)
 - n = 10: 267 ms
 - n = 11: 2 757 ms
 - n = 12: 32 496 ms
 - n = 13: 438 127 ms
+
+Tästä voidaan päätellä, että determinantin laskeminen sujuu hyvin vain pienillä matriiseilla. Matriisitulo toimii 
+suunnilleen riittävällä nopeudella, kun matriisien pituus tai leveys on suurimmillaan noin tuhat. Gaussin algoritmi 
+sen sijaan näyttäisi toimivan nopeasti myös melko suurilla matriiseilla.
