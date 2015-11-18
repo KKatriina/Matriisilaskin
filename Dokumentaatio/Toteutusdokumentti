@@ -15,7 +15,9 @@ uusi kaksiulotteinen taulukko
 - transpoosi: aikavaativuus (n x m)-matriisille O(nm), koska matriisi on käytävä kertaalleen läpi,
 tilavaativuus O(nm), koska luodaan uusi matriisi
 - determinantti: aikavaativuus (n x n)-matriisille O(n!). Aikavaativuus (2 x 2)-matriisille vakio, (k x k)-alamatriisin 
-luomisen aika- ja tilavaativuus O(k²). Alamatriisi-metodia taas kutsutaan rekursiivisesti KESKEN
+luomisen aika- ja tilavaativuus O(k²).
+- Gaussin algoritmi: aikavaativuus (n x n)-matriisille O(n³), koska matriisi käydään läpi alkio alkiolta, ja
+jokaista alkiota kohti käydään jokin rivi läpi kolmesti, tilavaativuus O(1), koska muutokset tehdään alkuperäiseen matriisiin
 
 Käyttöliittymä on melko alkeellinen. Olisi myös kiva, jos matriisin voisi 
 tallentaa ohjelman suoritusajaksi muistiin ja sille voisi tehdä monia toimituksia peräkkäin.
