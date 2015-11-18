@@ -1,3 +1,5 @@
 # Viikkoraportti 4
 
-Tällä viikolla olen tehnyt loppuun suorituskykytestauksen ja kirjoittanut dokumentteja.
+Tällä viikolla olen tehnyt loppuun suorituskykytestauksen ja kirjoittanut dokumentteja. 
+Fiksasin myös ohjelmani käyttöliittymää niin, että ohjelma ilmoittaa, jos syötetyt matriisit ovat väärän muotoisia 
+valittuun toimitukseen.
