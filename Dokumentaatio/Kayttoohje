@@ -1,0 +1,6 @@
+# Käyttöohje
+
+Ohjelman käyttö aloitetaan syöttämällä haluttua laskutoimitusta merkitsevä luku (ohjelma kertoo laskutoimitukset 
+ja luvut). Syöte x lopettaa ohjelman. Ohjelma kysyy ensin matriisin sarakkeiden ja rivien määrää.
+Sen jälkeen matriisin luvut syötetään ohjelmaan rivi kerrallaan, lukujen välissä välilyönti. 
+Matriisin luvut syötetään kokonaislukuina.
