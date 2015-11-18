@@ -37,7 +37,7 @@ public class LaskinTestSuorituskyky {
     
     @Test
     public void matriisituloNeliomatriisillaIsollaSyotteella() {
-        int isoLuku = 1000;
+        int isoLuku = 5000;
         int tavoiteaika = 5000;
         
         int[][] matriisi = new int[isoLuku][isoLuku];
@@ -50,27 +50,27 @@ public class LaskinTestSuorituskyky {
         
         long aika = 0;
         
-        for (int i = 0; i < 10; i++) {
+//        for (int i = 0; i < 10; i++) {
             long aikaAlussa = System.currentTimeMillis();
             laskin.tulo(matriisi, matriisi);
             long aikaLopussa = System.currentTimeMillis();
             aika = aika + (aikaLopussa - aikaAlussa);
-        }
-        
-        aika = aika / 10;
+//        }
+//        
+//        aika = aika / 10;
                
         System.out.println("Neliömatriisin tuloon kului aikaa: " + aika + "ms.");
         
-        boolean vertailu = aika < tavoiteaika;
-        
-        assertEquals(vertailu, true);
+//        boolean vertailu = aika < tavoiteaika;
+//        
+//        assertEquals(vertailu, true);
     }
     
     @Test
     public void matriisituloEiNeliomatriisillaIsollaSyotteella() {
-        int n = 10000;
-        int m = 100;
-        int p = 1000;
+        int n = 50000;
+        int m = 500;
+        int p = 5000;
         int tavoiteaika = 5000;
         
         int[][] matriisi1 = new int[n][m];
@@ -90,27 +90,27 @@ public class LaskinTestSuorituskyky {
         
         long aika = 0;
         
-        for (int i = 0; i < 10; i++) {
+//        for (int i = 0; i < 10; i++) {
             long aikaAlussa = System.currentTimeMillis();
             laskin.tulo(matriisi1, matriisi2);
             long aikaLopussa = System.currentTimeMillis();
             aika = aika + (aikaLopussa - aikaAlussa);
-        }
-        
-        aika = aika / 10;
+//        }
+//        
+//        aika = aika / 10;
                
         System.out.println("Matriisituloon kului aikaa: " + aika + "ms.");
-        
-        boolean vertailu = aika < tavoiteaika;
-        
-        assertEquals(vertailu, true);
+//        
+//        boolean vertailu = aika < tavoiteaika;
+//        
+//        assertEquals(vertailu, true);
     }
     
     //Gaussin-Jordanin eliminoinnin aikavaativuus O(n³)
     
     @Test
     public void gaussinAlgoritmiIsollaSyotteella() {
-        int isoLuku = 1000;
+        int isoLuku = 5000;
         int tavoiteaika = 5000;
         
         double[][] matriisi = new double[isoLuku][isoLuku];
@@ -129,16 +129,16 @@ public class LaskinTestSuorituskyky {
             aika = aikaLopussa - aikaAlussa;
                
         System.out.println("Gaussin algoritmiin kului aikaa: " + aika + "ms.");
-        
-        boolean vertailu = aika < tavoiteaika;
-        
-        assertEquals(vertailu, true);
+//        
+//        boolean vertailu = aika < tavoiteaika;
+//        
+//        assertEquals(vertailu, true);
     }
     
-    //determinantin aikavaativuus O(n³)
-    @Test
+    //determinantin aikavaativuus O(n!)
+//    @Test
     public void determinanttiIsollaSyotteella() {
-        int isoLuku = 1000;
+        int isoLuku = 13;
         int tavoiteaika = 5000;
         
         int[][] matriisi = new int[isoLuku][isoLuku];
@@ -154,13 +154,13 @@ public class LaskinTestSuorituskyky {
         long aikaAlussa = System.currentTimeMillis();
         laskin.determinantti(matriisi);
         long aikaLopussa = System.currentTimeMillis();
-            aika = aikaLopussa - aikaAlussa;
+        aika = aikaLopussa - aikaAlussa;
                
         System.out.println("Determinantin laskemiseen kului aikaa: " + aika + "ms.");
-        
-        boolean vertailu = aika < tavoiteaika;
-        
-        assertEquals(vertailu, true);
+//        
+//        boolean vertailu = aika < tavoiteaika;
+//        
+//        assertEquals(vertailu, true);
     }
     
 

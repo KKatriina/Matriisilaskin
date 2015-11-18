@@ -86,10 +86,12 @@ public class Main {
         System.out.println("Toinen matriisi:");
         int[][] matriisi2 = tallennaMatriisi(lukija);
         
-        //tarvitaanko tähän jotakin virheellisten tsekkausta?
-        
-        int[][] tulos = laskin.summa(matriisi1, matriisi2);
-        tulosta(tulos);
+        if (matriisi1.length != matriisi2.length || matriisi1[0].length != matriisi2[0].length) {
+            System.out.println("Summaa ei voi laskea, sillä matriisit ovat erimuotoisia");
+        } else {
+            int[][] tulos = laskin.summa(matriisi1, matriisi2);
+            tulosta(tulos);
+        }
     }
     
         /**
@@ -155,10 +157,12 @@ public class Main {
         System.out.println("Toinen matriisi:");
         int[][] matriisi2 = tallennaMatriisi(lukija);
         
-        //tarvitaanko tähän jotakin virheellisten tsekkausta?
-        
-        int[][] tulos = laskin.tulo(matriisi1, matriisi2);
-        tulosta(tulos);
+        if (matriisi1[0].length != matriisi2.length) {
+            System.out.println("Matriisituloa ei voi laskea, sillä ensimmäisen matriisin sarakkeiden määrä ei ole sama kuin toisen matriisin rivien määrä");
+        } else {
+            int[][] tulos = laskin.tulo(matriisi1, matriisi2);
+            tulosta(tulos);
+        }
     }
 
             /**
@@ -169,8 +173,13 @@ public class Main {
  * 
  */ 
     public static void determinantti(Scanner lukija, Laskin laskin) {
-        int tulos = laskin.determinantti(tallennaMatriisi(lukija));
-        System.out.println("Matriisin determinantti on " + tulos);
+        int[][] matriisi = tallennaMatriisi(lukija);
+        if (matriisi.length != matriisi[0].length) {
+            System.out.println("Determinanttia ei voi määrittää, sillä matriisi ei ole neliömatriisi");
+        } else {
+            int tulos = laskin.determinantti(matriisi);
+            System.out.println("Matriisin determinantti on " + tulos);
+        }
     }
 
                 /**
@@ -181,7 +190,8 @@ public class Main {
  * 
  */ 
     public static void transpoosi(Scanner lukija, Laskin laskin) {
-        int[][] tulos = laskin.transpoosi(tallennaMatriisi(lukija));
+        int[][] matriisi = tallennaMatriisi(lukija);
+        int[][] tulos = laskin.transpoosi(matriisi);
         tulosta(tulos);
     }
     
