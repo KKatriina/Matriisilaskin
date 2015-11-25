@@ -45,3 +45,8 @@ Determinantti O(n!)
 Tästä voidaan päätellä, että determinantin laskeminen sujuu hyvin vain pienillä matriiseilla. Matriisitulo toimii 
 suunnilleen riittävällä nopeudella, kun matriisien pituus tai leveys on suurimmillaan noin tuhat. Gaussin algoritmi 
 sen sijaan näyttäisi toimivan nopeasti myös melko suurilla matriiseilla.
+
+Tulokset vastaavat aikavaatimuksia suhteellisen hyvin, determinantin kohdalla erittäin tarkasti ja muiden kohdalla
+huonommin. Gaussin algoritmin kohdalla tarvittava aika kasvoi vähiten suhteessa siihen, mitä 
+aikavaatimusanalyysi olisi antanut odottaa. Tämä voi kuitenkin yhteydessä siihen, että myös Gaussin algoritmin 
+absoluuttiset suoritusajat olivat kaikkein pienimpiä - algoritmi on siis yleisesti ilmeisen kevyt suorittaa.
