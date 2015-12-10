@@ -4,3 +4,5 @@ Ohjelman käyttö aloitetaan syöttämällä haluttua laskutoimitusta merkitsev�
 ja luvut). Syöte x lopettaa ohjelman. Ohjelma kysyy ensin matriisin sarakkeiden ja rivien määrää.
 Sen jälkeen matriisin luvut syötetään ohjelmaan rivi kerrallaan, lukujen välissä välilyönti. 
 Matriisin luvut syötetään kokonaislukuina.
+
+Jar-tiedosto sijaitsee projektin juuressa.
