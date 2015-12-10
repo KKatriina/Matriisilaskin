@@ -1,4 +1,7 @@
+package Matriisilaskin;
 
+
+import Matriisilaskin.Laskin;
 import java.util.Scanner;
 
 /*
